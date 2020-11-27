@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>
+        Validation
+    </title>
+</head>
+<body style="background-color: rgb(190, 135, 235);">
+    <style>
+        * {box-sizing: border-box}
+
+    h1 {
+        text-align: center;
+        color: rgb(59, 20, 95);
+    }
+    
+    .container {
+      padding: 15px;
+      font: 12px helvetica;
+    }
+    
+    input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 25px 0;
+      display: inline-block;
+      border: none;
+      background-color: rgb(252, 255, 80);
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color:rgb(255, 255, 255);
+      outline: none;
+    }
+    
+    hr {
+      border: 1px solid beige;
+      margin-bottom: 25px;
+      
+    }
+    
+    .loginform {
+      background-color:turquoise;
+      color: rgb(255, 255, 255);
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .loginform:hover {
+      opacity:1;
+    }
+    
+    a {
+      color: rgb(160, 141, 94);
+    }
+    
+    </style>
+        <form>
+            <div class="container">
+              <h1>Validation</h1>
+              <hr>
+              <label for="namamu"><b>Isi Nama</b></label>
+              <input type="text" placeholder="Isi Namamu" name="Namamu" id="Namamu" required>
+          <br>
+              <button type="submit" onclick="return login()" class="loginform">Submit</button>
+            </div>
+        </form>
+</body>
+
+  <script type="text/javascript">
+    function login() {
+        nickname = document.getElementById("namamu").value;
+
+        if (nickname == "") {
+            alert("Namamu Harap Di isi");
+            return false;
+        }
+        else if (nickname == "udin") {
+            window.location = "submitted.html";
+            return false;
+        }
+        else{
+            alert("Namamu yang anda masukan salah");
+        }
+    }
+  </script>
+</html>

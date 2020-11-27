@@ -1,0 +1,85 @@
+<body>
+    <style>
+        * {box-sizing: border-box}
+    
+    .container {
+      padding: 16px;
+      font: 12px arial;
+    }
+    
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    
+    .loginform {
+      background-color: rgb(245, 242, 57);
+      color: rgb(19, 18, 18);
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    .loginform:hover {
+      opacity:1;
+    }
+    
+    </style>
+    
+    <body style="background-color: rgb(190, 135, 235);">
+        <form>
+            <div class="container">
+              <h1>Login</h1>
+              <hr>
+              <label for="username"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="username" id="username" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+          
+              <button type="submit" onclick="return login()" class="loginform">Login</button>
+            </div>
+        </form>
+</body>
+
+  <script type="text/javascript">
+    function login() {
+        username = document.getElementById("username").value;
+        password = document.getElementById("password").value;
+
+        if (username == "" || password == "") {
+            alert("Username or Password must be filled");
+            return false;
+        }
+        else if (password.length < 8) {
+            alert("Password less then 8 character");
+            return false;
+        }
+        else if (username == "ramabayu" && password == "ramabayu1234567") {
+            window.location = "Access Granted.html";
+            return false;
+        }
+        else{
+            alert("Username or Password wrong");
+        }
+    }
+  </script>
+
+</html>

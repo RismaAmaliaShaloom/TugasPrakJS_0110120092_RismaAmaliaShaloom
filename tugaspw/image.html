@@ -1,0 +1,17 @@
+<!DOCTYPE html><html>
+    <head>	<title>IMAGE PICKER</title></head>
+<body style="margin: 200px"> 	
+    <center>		
+    <select onchange="gantigambar();" id="listgambar">			
+        <option value="https://logopasti.com/wp-content/uploads/2020/08/KEDAY-CUY.jpg">PILIH MINUMAN</option>	
+        <option value="https://cache.jpnn.com/timthumb.php?src=https://photo.jpnn.com//picture/normal/20160215_223233/223233_287450_kopi_bes.jpg&w=600&h=320&a=t&zc=0&q=80">KOPI HITAM</option>		
+        <option value="https://assets-a1.kompasiana.com/items/album/2017/06/17/editkopsus-5944ab4d66afbd3432b13067.png">KOPI SUSU</option>	
+        <option value="https://www.clipartkey.com/mpngs/m/186-1860147_iced-tea-png-pic-ice-tea-png.png">ICE TEA</option>		
+        <option value="https://www.clonelab.at/wp-content/uploads/28.jpg">ORANGE JUICE</option>		
+        <option value="https://www.resepkuerenyah.com/wp-content/uploads/2015/08/Resep-Cara-Membuat-Milkshake-Coklat-Spesial.jpg">ICE CHOCOLATE</option>
+        <option value="https://cf.shopee.co.id/file/56096517df59a7555d47eefe827091d9">MINERAL WATER</option>
+        </select>	</center>
+        <br/>	<img src="https://logopasti.com/wp-content/uploads/2020/08/KEDAY-CUY.jpg" style="width: 100%" id="gambar">
+        </body><script type="text/javascript">	function gantigambar()
+        {		let gambar = document.getElementById("listgambar").value;		document.getElementById("gambar").src = gambar;	
+        alert("Ini Gambar " + gambar);	}</script></html>
